@@ -25,6 +25,8 @@
 
 
 
+> 
+>
 > 1. 添加：git add test.txt / 如果文件比较多 git add .（当前目录的全部文件）。 此时git只是暂时保存，还没有提交记录
 > 2. 提交：git commit/ git commit -m "提交说明xxx"简化操作   "fix(test): change content"
 > 3. 查看日志：git log 
@@ -35,7 +37,7 @@
 > 8. 线性的提交历史：git rebase main(从当前分支整体复制到main上)
 > 9. 从远程仓库获取最新的代码并将其合并到你的本地分支中：git pull(`git fetch` 和 `git merge` 命令的组合)
 
-![image-20231102221841315](C:\Users\lanze\OneDrive\md笔记本\9插图文件\image-20231102221841315.png)
+
 
 > 第一次提交
 >
@@ -48,8 +50,6 @@
 > 工作区 => 暂存区: git add 文件名 /git add *    
 >
 > 暂存区 => 远程仓库: git remote add origin address -> git push -u origin main（main要推送的本地分支的名称/ -u用于设置本地分支与远程分支的关联）
-
-![img](C:\Users\lanze\OneDrive\md笔记本\9插图文件\c3c6cace1ad741cd8789c603485bc264.jpeg)
 
 
 
@@ -73,27 +73,14 @@
 
 # 三、Others
 
-> [列出了一些实用和救命的git操作](https://ohshitgit.com/zh)
+> 1. [列出了一些实用和救命的git操作](https://ohshitgit.com/zh)
+> 2. [git commit规范](https://www.conventionalcommits.org/zh-hans/v1.0.0/)，约定式提交：
+> 3. [git闯关式学习](https://learngitbranching.js.org/?locale=zh_CN)，learn git branching
+> 4. [聊聊 Github 常见的几个按钮 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/511225962)
 
-> 1. [git commit规范](https://www.conventionalcommits.org/zh-hans/v1.0.0/)，约定式提交：
-> 2. [git闯关式学习](https://learngitbranching.js.org/?locale=zh_CN)，learn git branching：
-
-> 报错：Failed to connect to github.com port 443 /fatal: unable to access这是由于电脑里开启了代理,例如开启了翻墙软件等,就会造成这个原因
+> 常见报错：Failed to connect to github.com port 443 /fatal: unable to access这是由于电脑里开启了代理,例如开启了翻墙软件等,就会造成这个原因。解决如下：
 >
-> 解决:取消全局代理：
-> git config --global --unset http.proxy
-> git config --global --unset https.proxy
->
-> 或者在设置网络和internet>代理 手动编辑代理服务器，端口设置7890，然后终端输入：git config --global http.proxy http://127.0.0.1:7890
+> 1. 取消全局代理：git config --global --unset http.proxy
+>    git config --global --unset https.proxy
+> 2. 或者在设置网络和internet>代理 手动编辑代理服务器，端口设置7890，然后终端输入：git config --global http.proxy http://127.0.0.1:7890
 
-> [聊聊 Github 常见的几个按钮 - 知乎 (zhihu.com)](https://zhuanlan.zhihu.com/p/511225962)
-
-
-
-> **1. 什么是shell?**
->
-> ​	shell是你（用户）和Linux（或者更准确的说，是你和Linux内核）之间的接口程序。你在提示符下输入的每个命令都由shell先解释然后传给Linux内核。一般来说，这个词是指操作系统中，提供访问内核所提供之服务的程序。Unix操作系统下的shell既是用户交互的程序，也是控制系统的脚本语言
->
-> **2. bash是什么？**
->
-> ​	shell是一种脚本语言，执行脚本语言需要解释器执行，而bash就是其中一种。bash 是 Linux 标准默认的 shell，但是同样有其他shell解释器，例如`sh`、`ksh`、`zsh`等等
