@@ -18,6 +18,27 @@
 
 [git、github教程_哔哩哔哩](https://www.bilibili.com/video/BV1s3411g7PS/?spm_id_from=333.788&vd_source=a2b906f1078e767936dd0bbcf1275e2e)
 
+
+
+
+
+> 先在github上New repository
+>
+> 然后本地建立对应项目
+>
+> ```
+> git init
+> git add .
+> git commit -m "first commit"
+> git branch -M main
+> git remote add origin https://github.com/yangxze/demo.git
+> git push -u origin main
+> ```
+
+
+
+
+
 > 1. git version/ where git
 > 2. git config --global user.name  "yangxze" / git config --global user.email "77964200@qq.com"
 > 3. git config --list
